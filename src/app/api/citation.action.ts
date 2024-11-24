@@ -26,3 +26,19 @@ export const prismaDeleteById = async (id: number) => {
 
   return { message: "deleted" };
 };
+export const updateDataApi = async (
+  id: number,
+  author: string,
+  citation: string
+) => {
+  try {
+    await prisma.sampleForm.update({
+      where: { id },
+      data: { author, citation },
+    });
+    return true
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
