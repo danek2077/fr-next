@@ -1,6 +1,6 @@
 "use client";
 import React, { FormEvent } from "react";
-import { createNewForm } from "./citation.action";
+import { createNewForm } from "../../api/citation.action";
 import { useRouter } from "next/navigation";
 
 const page = () => {
